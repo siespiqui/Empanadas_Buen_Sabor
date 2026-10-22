@@ -1,0 +1,23 @@
+# Entorno Virtual
+venv/
+env/
+ENV/
+
+# Archivos compilados de Python / Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de configuración de entorno o contraseñas
+.env
+
+# Archivos de la base de datos local de SQLite (por si acaso)
+*.sqlite3
+*.db
+
+# Archivos subidos por los usuarios (Imágenes de empanadas/productos)
+media/
+
+# Configuraciones locales de editores
+.vscode/
+.idea/
