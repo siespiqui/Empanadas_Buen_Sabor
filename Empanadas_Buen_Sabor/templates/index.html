@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empanadas El Buen Sabor</title>
+  
+  <!-- Estilos CSS Externos -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  
+  <!-- Tipografías de Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- PANTALLA DE CARGA (LOADER) -->
+  <div id="loader">
+    <div class="loader-content">
+      <img src="{% static 'img/logo-loader.png' %}" alt="Logo" class="loader-logo" id="loader-logo-img" />
+      <span id="loader-emoji" class="loader-emoji-fallback">🥟</span>
+      <h2>Empanadas El Buen Sabor</h2>
+      <p>Preparando el sabor...</p>
+      <div class="barra-contenedor">
+        <div class="barra-progreso"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER / NAVBAR ESTILO E-COMMERCE -->
+  <header id="navbar">
+    <div class="nav-container">
+      
+      <!-- LOGO + MARCA -->
+      <div class="nav-brand">
+        <a href="#inicio" class="brand-link">
+          <img src="{% static 'img/logo-loader.png' %}" alt="Logo Sabor" class="nav-header-logo" id="nav-header-logo-img" />
+          <div class="nav-logo-text">
+            EMPANADAS <br/><span>EL BUEN SABOR</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- BARRA DE BÚSQUEDA CENTRAL -->
+      <div class="nav-search-box">
+        <input type="text" placeholder="Buscar empanadas, combos, bebidas..." class="search-input" />
+        <button class="search-btn" aria-label="Buscar">🔍</button>
+      </div>
+
+      <!-- MENÚ DE NAVEGACIÓN Y ACCIONES DE USUARIO -->
+      <div class="nav-actions">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">☰</button>
+        
+        <nav class="nav-links" id="nav-links">
+          <a href="#menu" class="nav-link-item">Menú</a>
+          <a href="#pedidos" class="nav-link-item">Pedir Domicilio</a>
+          <a href="#nosotros" class="nav-link-item">Nosotros</a>
+          <a href="#footer" class="nav-link-item">Contacto</a>
+        </nav>
+
+        <!-- HERRAMIENTAS Y LOGIN EN HEADER -->
+        <div class="user-tools">
+          <button class="tool-btn" id="btn-config" title="Configuración">⚙️</button>
+          <a href="#" class="tool-btn btn-auth" title="Iniciar Sesión">👤</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Empanadas El Buen <span>Sabor</span></h1>
+      <p class="hero-sub">Tradición, sabor y calidad en cada bocado. Hechas a mano todos los días.</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">Ver Menú</a>
+        <a href="#pedidos" class="btn-secondary">Hacer Pedido</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE MENÚ / PRODUCTOS -->
+  <section id="menu" class="menu-section">
+    <div class="section-header">
+      <h2>🥟 Nuestro Menú Destacado</h2>
+      <p>Escoge tu favorita y haz tu pedido en línea</p>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Tarjeta 1 -->
+      <article class="product-card">
+        <div class="card-img-wrapper">
+          <span class="card-tag">Más Vendida</span>
+          <img src="{% static 'img/logo-loader.png' %}" alt="Empanada Carne" class="product-img-fallback" />
+        </div>
+        <div class="card-body">
+          <h3>Empanada de Carne Desmechada</h3>
+          <p>Carne suave sazonada con guiso tradicional y papa criolla.</p>
+          <div class="card-footer">
+            <span class="price">$ 3.500</span>
+            <button class="btn-card">Agregar 🛒</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tarjeta 2 -->
+      <article class="product-card">
+        <div class="card-img-wrapper">
+          <img src="{% static 'img/logo-loader.png' %}" alt="Empanada Pollo" class="product-img-fallback" />
+        </div>
+        <div class="card-body">
+          <h3>Empanada de Pollo Champiñón</h3>
+          <p>Pechuga desmechada en salsa bechamel con champiñones frescos.</p>
+          <div class="card-footer">
+            <span class="price">$ 3.800</span>
+            <button class="btn-card">Agregar 🛒</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tarjeta 3 -->
+      <article class="product-card">
+        <div class="card-img-wrapper">
+          <span class="card-tag promo">Especial</span>
+          <img src="{% static 'img/logo-loader.png' %}" alt="Empanada Mixta" class="product-img-fallback" />
+        </div>
+        <div class="card-body">
+          <h3>Empanada Ranchera</h3>
+          <p>Salchicha ranchera, queso doble crema, maicitos y tocineta crocante.</p>
+          <div class="card-footer">
+            <span class="price">$ 4.200</span>
+            <button class="btn-card">Agregar 🛒</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tarjeta 4 -->
+      <article class="product-card">
+        <div class="card-img-wrapper">
+          <img src="{% static 'img/logo-loader.png' %}" alt="Empanada Queso" class="product-img-fallback" />
+        </div>
+        <div class="card-body">
+          <h3>Empanada Queso y Maíz</h3>
+          <p>Queso campesino hilado mezclado con dulce maíz tierno.</p>
+          <div class="card-footer">
+            <span class="price">$ 3.200</span>
+            <button class="btn-card">Agregar 🛒</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECCIÓN NOSOTROS -->
+  <section id="nosotros" class="about-section">
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Nuestra Historia</h2>
+        <p>En **Empanadas El Buen Sabor** preparamos cada empanada con ingredientes seleccionados y el toque casero de nuestra tierra. Con más de 5 años deleitando a nuestras familias, nos esforzamos día a día por ofrecer crocancia, sabor auténtico y la mejor atención.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTÓN FLOTANTE DEL CARRITO DE COMPRAS -->
+  <button class="cart-floating-btn" id="btn-floating-cart" title="Ver Carrito de Pedidos">
+    🛒
+    <span class="cart-badge" id="cart-count">0</span>
+  </button>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Empanadas El Buen Sabor</h3>
+        <p>Tradición en cada bocado. Las mejores empanadas artesanales de la ciudad.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto & Pedidos</h4>
+        <p>📞 Teléfono: +57 300 123 4567</p>
+        <p>📍 Dirección: Calle Principal # 12-34</p>
+        <p>✉️ Correo: contacto@elbuensabor.com</p>
+      </div>
+      <div class="footer-col">
+        <h4>Horarios de Atención</h4>
+        <p>Lunes a Viernes: 7:00 AM - 8:00 PM</p>
+        <p>Sábados y Domingos: 8:00 AM - 9:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Empanadas El Buen Sabor. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Lógica JavaScript Externa -->
+  <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
