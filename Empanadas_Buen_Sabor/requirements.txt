@@ -4,3 +4,9 @@ pillow==13.0.0
 PyMySQL==1.2.3
 sqlparse==0.6.0
 tzdata==2026.5
+
+# Comandos de referencia para la terminal:
+# venv\Scripts\Activate.bat
+# pip install -r requirements.txt
+# python manage.py migrate
+# python manage.py runserver
